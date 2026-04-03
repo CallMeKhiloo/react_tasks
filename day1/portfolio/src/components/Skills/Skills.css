@@ -1,0 +1,36 @@
+.skills-section {
+  padding: 50px;
+  background-color: white;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  background-color: #3b82f6;
+}
+
+.react-level {
+  width: 60%;
+}
+
+.nodejs-level {
+  width: 80%;
+}
+
+.cpp-level {
+  width: 90%;
+}
+
+.skills-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
