@@ -1,0 +1,7 @@
+.link.active {
+  background-color: #4655dd;
+  color: #ffffff;
+  border-radius: 5px;
+  max-width: fit-content;
+  font-weight: bold;
+}
