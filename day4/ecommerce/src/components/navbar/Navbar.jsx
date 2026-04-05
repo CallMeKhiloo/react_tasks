@@ -13,6 +13,15 @@ const Navbar = () => {
           {language === "en" ? "Home" : "الرئيسية"}
         </NavLink>
         <NavLink
+          to="/register"
+          className="link text-xl font-bold text-gray-800"
+        >
+          {language === "en" ? "Register" : "التسجيل"}
+        </NavLink>
+        <NavLink to="/contact" className="link text-xl font-bold text-gray-800">
+          {language === "en" ? "Contact Us" : "اتصل بنا"}
+        </NavLink>
+        <NavLink
           to="/products"
           className="link text-xl font-bold text-gray-800"
         >

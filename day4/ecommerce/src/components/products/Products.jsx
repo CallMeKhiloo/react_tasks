@@ -1,9 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import ProductCard from "./ProductCard";
+import AuthContext from "../../context/Auth/AuthContext";
+import { useNavigate } from "react-router";
 
 const Products = () => {
+  const { user } = useContext(AuthContext);
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchProducts() {
@@ -12,6 +16,11 @@ const Products = () => {
     }
     fetchProducts();
   }, []);
+
+  if (!user) {
+    navigate("/register");
+    return <div className="container mx-auto px-4 py-8">loading...</div>;
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">

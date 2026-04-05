@@ -9,6 +9,9 @@ import NotFound from "./components/notfound/NotFound";
 import Cart from "./components/cart/Cart";
 import { useState } from "react";
 import LanguageContext from "./context/LanguageContext";
+import Register from "./components/registerPage/Register";
+import ContactUs from "./components/contactus/contactus";
+import AuthProvider from "./context/Auth/AuthProvider";
 
 function App() {
   const [language, setLanguage] = useState("en");
@@ -19,6 +22,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<CertainProduct />} />
           <Route path="/cart" element={<Cart />} />
